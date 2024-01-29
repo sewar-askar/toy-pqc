@@ -51,10 +51,8 @@ The decryption algorithm decrypts a ciphertext (u, v) as follows:
 
 You can use the gcc compiler to compile  program as follows:
 
-```bash
-gcc -o main toy.c main.c
+`gcc -o main toy.c main.c`
 
-## Execution
 Run your program with the following command:
 
 `./main`
