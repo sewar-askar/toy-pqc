@@ -20,6 +20,9 @@ The toy-version of the Kyber cryptosystem uses the following parameters:
 
 The key generation algorithm generates a public key and a private key as follows:
 
+
+
+
 - The public key consists of a matrix A of size K x K and a vector t of size K, where each entry is a polynomial of degree N-1 with coefficients in Z_q
 - The private key consists of a vector s of size K, where each entry is a polynomial of degree N-1 with coefficients in {-1, 0, 1}
 - The matrix A is filled with random polynomials modulo q
@@ -43,3 +46,15 @@ The decryption algorithm decrypts a ciphertext (u, v) as follows:
 - The plaintext message m is recovered as an integer representing a binary vector of size N
 - A vector p of size N is computed as p = v - s * u, where * denotes the dot product of two vectors modulo q
 - The vector p is rounded to the nearest multiple of q/2 and then reduced modulo 2 to obtain the message m
+
+## Compilation
+
+You can use the gcc compiler to compile  program as follows:
+
+```bash
+gcc -o main toy.c main.c
+
+## Execution
+Run your program with the following command:
+
+`./main`
